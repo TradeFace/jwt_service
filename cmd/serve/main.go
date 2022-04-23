@@ -8,15 +8,13 @@ import (
 	echolog "github.com/labstack/gommon/log"
 	"github.com/rs/zerolog/log"
 	"github.com/tradeface/jwt_service/internal/conf"
-	"github.com/tradeface/jwt_service/pkg/middleware"
-	"github.com/tradeface/jwt_service/pkg/server"
-	"github.com/tradeface/jwt_service/pkg/store"
+	"github.com/tradeface/jwt_service/internal/server"
+	"github.com/tradeface/suggest_service/pkg/middleware"
 	"github.com/tradeface/suggest_service/pkg/service"
+	"github.com/tradeface/suggest_service/pkg/store"
 )
 
 //TODO: config cli/dockersecrets
-
-//  https://pkg.go.dev/github.com/golang-jwt/jwt/v4
 
 const (
 	// APPNAME contains the name of the program
