@@ -10,11 +10,9 @@ require (
 	github.com/labstack/gommon v0.3.1
 	github.com/pkg/errors v0.9.1
 	github.com/rs/zerolog v1.26.1
-	// github.com/tradeface/suggest_service v0.0.0-20220423124843-b9c939711573
+	github.com/tradeface/suggest_service v0.0.0-20220423153809-a8d691f70aa9
 	go.mongodb.org/mongo-driver v1.9.0 // indirect
 )
-
-require github.com/tradeface/suggest_service v0.0.0-20220423153809-a8d691f70aa9
 
 require (
 	github.com/elastic/go-elasticsearch/v7 v7.17.1 // indirect

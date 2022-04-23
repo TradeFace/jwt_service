@@ -22,12 +22,12 @@ staging environment:
   variables:
     RELEASE_STAGE: accept
     REPLICAS: 1
-    STACK: suggest_service_accept
+    STACK: jwt_service_accept
   <<: *release
 
 production environment:
   variables:
     RELEASE_STAGE: production
-    STACK: suggest_service_production
+    STACK: jwt_service_production
     REPLICAS: 0
   <<: *release

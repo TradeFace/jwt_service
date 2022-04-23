@@ -1,8 +1,8 @@
 version: "3.4"
 
 services:
-  suggest_service:
-    image: ${CI_REGISTRY_IMAGE}/suggest_service
+  jwt_service:
+    image: ${CI_REGISTRY_IMAGE}/jwt_service
     build:
       context: ../../
-      dockerfile: build/docker/suggest_service/Dockerfile
+      dockerfile: build/docker/jwt_service/Dockerfile

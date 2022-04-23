@@ -4,19 +4,14 @@ version: "3.4"
 secrets:
   mongo_accept_uri:
     external: true
-  es_accept_uri:
-    external: true
   mongo_production_uri:
-    external: true
-  es_production_uri:
     external: true
 
 services:
-  suggest_service:
-    image: ${CI_REGISTRY_IMAGE}/suggest_service
+  jwt_service:
+    image: ${CI_REGISTRY_IMAGE}/jwt_service
     secrets:
       - mongo_${RELEASE_STAGE}_uri
-      - es_${RELEASE_STAGE}_uri
     environment:
       - ENV_INSTANCE=${RELEASE_STAGE}
     command:
