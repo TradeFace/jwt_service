@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/tradeface/jwt_service/internal/conf"
 	"github.com/tradeface/jwt_service/pkg/authorization"
-	"github.com/tradeface/suggest_service/pkg/store"
+	"github.com/tradeface/jwt_service/pkg/store"
 )
 
 type Server struct {

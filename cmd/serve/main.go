@@ -10,8 +10,8 @@ import (
 	"github.com/tradeface/jwt_service/internal/conf"
 	"github.com/tradeface/jwt_service/pkg/middleware"
 	"github.com/tradeface/jwt_service/pkg/server"
-	"github.com/tradeface/jwt_service/pkg/service"
 	"github.com/tradeface/jwt_service/pkg/store"
+	"github.com/tradeface/suggest_service/pkg/service"
 )
 
 //TODO: config cli/dockersecrets
@@ -32,7 +32,12 @@ func main() {
 		log.Fatal().Err(err).Msg("failed to load config")
 	}
 
-	services, err := service.New(cfg)
+	srvConf := &service.Config{
+		MongoURI: cfg.MongoURI,
+		MongoDB:  cfg.MongoDB,
+	}
+
+	services, err := service.New(srvConf)
 	if err != nil {
 		log.Fatal().Err(err).Msg("failed to connect to db")
 	}
@@ -51,9 +56,6 @@ func main() {
 	// shut up
 	e.Logger.SetOutput(ioutil.Discard)
 	e.Logger.SetLevel(echolog.OFF)
-
-	// tmp Login route
-	// e.GET("/login", login)
 
 	// e.Use(middleware.Logger())
 	// e.Use(middleware.Recover())
