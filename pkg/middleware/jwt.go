@@ -7,7 +7,7 @@ import (
 	"github.com/golang-jwt/jwt"
 	"github.com/labstack/echo/v4"
 	"github.com/rs/zerolog/log"
-	"github.com/tradeface/suggest_service/pkg/authorization"
+	"github.com/tradeface/jwt_service/pkg/authorization"
 	"github.com/tradeface/suggest_service/pkg/store"
 )
 
